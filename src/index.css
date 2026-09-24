@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #10B981;    /* Emerald Green Principal */
+  --color-brand-dark: #047857;       /* Dark Forest Green */
+  --color-brand-light: #A7F3D0;      /* Soft Mint Light */
+  --color-brand-pink: #EC4899;       /* Vibrant Pink Accent */
+  --color-brand-rose: #F43F5E;       /* Rose Pink */
+  --color-brand-[#FDFBF7]: #FDFBF7;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #FDFBF7;
+  color: #18181B;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Glassmorphism & Micro-animations Green/Pink */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.gradient-text-brand {
+  background: linear-gradient(135deg, #10B981 0%, #059669 40%, #EC4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-glow {
+  box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.35);
+}
+
+.gradient-glow-lg {
+  box-shadow: 0 25px 60px -15px rgba(16, 185, 129, 0.45);
+}
+
+.gradient-glow-pink {
+  box-shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.35);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
