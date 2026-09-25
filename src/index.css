@@ -3,9 +3,9 @@
 @theme {
   --color-brand-primary: #10B981;    /* Emerald Green Principal */
   --color-brand-dark: #047857;       /* Dark Forest Green */
-  --color-brand-light: #A7F3D0;      /* Soft Mint Light */
-  --color-brand-pink: #EC4899;       /* Vibrant Pink Accent */
-  --color-brand-rose: #F43F5E;       /* Rose Pink */
+  --color-brand-mint: #34D399;       /* Vibrant Spring Mint */
+  --color-brand-sage: #6EE7B7;       /* Soft Sage Mint */
+  --color-brand-forest: #065F46;     /* Deep Pine Green */
   --color-brand-[#FDFBF7]: #FDFBF7;
   --font-serif: "Playfair Display", Georgia, serif;
   --font-sans: "Plus Jakarta Sans", sans-serif;
@@ -23,7 +23,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Glassmorphism & Micro-animations Green/Pink */
+/* Custom Glassmorphism & Micro-animations Multi-Tone Green */
 .glass-card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
@@ -32,7 +32,7 @@ body {
 }
 
 .gradient-text-brand {
-  background: linear-gradient(135deg, #10B981 0%, #059669 40%, #EC4899 100%);
+  background: linear-gradient(135deg, #047857 0%, #10B981 50%, #34D399 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -45,8 +45,8 @@ body {
   box-shadow: 0 25px 60px -15px rgba(16, 185, 129, 0.45);
 }
 
-.gradient-glow-pink {
-  box-shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.35);
+.gradient-glow-mint {
+  box-shadow: 0 20px 40px -15px rgba(52, 211, 153, 0.4);
 }
 
 @keyframes float {

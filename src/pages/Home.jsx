@@ -55,18 +55,18 @@ export default function Home() {
       {/* 3. MODALIDADES DE BONOS CULTURALES */}
       <Section id="bonos-culturales" className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 space-y-14">
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <span className="text-xs uppercase tracking-widest text-[#EC4899] font-extrabold bg-pink-100/70 px-3.5 py-1 rounded-full border border-pink-300">
+          <span className="text-xs uppercase tracking-widest text-[#10B981] font-extrabold bg-emerald-100/70 px-3.5 py-1 rounded-full border border-emerald-300">
             Membresías Solidarias
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#18181B] font-semibold">
-            Tres Modalidades de Bonos
+            Cuatro Modalidades de Bonos
           </h2>
           <p className="text-sm sm:text-base text-[#52525B]">
-            Diseñadas para diversificar las audiencias, nutrir la cartelera comunitaria y garantizar ingresos continuos a los espacios asociados.
+            Diseñadas para democratizar el acceso a espectáculos en vivo, deporte popular, teatro independiente y cine de autor.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {BONOS_DATA.map((bono) => (
             <CardBono key={bono.id} bono={bono} />
           ))}
@@ -98,7 +98,7 @@ export default function Home() {
                   {stepItem.step}
                 </span>
                 <div className="space-y-3 relative z-10">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#10B981] to-[#EC4899] text-white flex items-center justify-center font-bold text-base shadow-sm">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#047857] via-[#10B981] to-[#34D399] text-white flex items-center justify-center font-bold text-base shadow-sm">
                     {idx + 1}
                   </div>
                   <h3 className="font-bold text-lg text-[#18181B]">{stepItem.title}</h3>
@@ -148,25 +148,25 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="p-7 rounded-3xl bg-white border border-[#E6DAD0] shadow-sm space-y-4 hover:border-[#EC4899]/50 transition-all">
+              <div className="p-7 rounded-3xl bg-white border border-[#E6DAD0] shadow-sm space-y-4 hover:border-[#059669]/50 transition-all">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#EC4899]">Ocupación de Butacas</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#059669]">Ocupación de Butacas</span>
                   <div className="flex items-baseline gap-2 mt-1">
-                    <span className="font-serif text-4xl font-bold text-[#EC4899]">{IMPACT_METRICS.occupancy}</span>
+                    <span className="font-serif text-4xl font-bold text-[#059669]">{IMPACT_METRICS.occupancy}</span>
                     <span className="text-xs text-[#71717A]">promedio mensual</span>
                   </div>
                 </div>
                 <p className="text-xs text-[#52525B] leading-relaxed">{IMPACT_METRICS.occupancyDesc}</p>
-                <div className="w-full bg-pink-100 h-2 rounded-full overflow-hidden">
-                  <div className="bg-[#EC4899] h-full rounded-full w-4/5"></div>
+                <div className="w-full bg-emerald-100 h-2 rounded-full overflow-hidden">
+                  <div className="bg-[#059669] h-full rounded-full w-4/5"></div>
                 </div>
               </div>
 
-              <div className="sm:col-span-2 p-7 rounded-3xl bg-white border border-[#E6DAD0] shadow-sm space-y-4 hover:border-[#059669]/50 transition-all">
+              <div className="sm:col-span-2 p-7 rounded-3xl bg-white border border-[#E6DAD0] shadow-sm space-y-4 hover:border-[#047857]/50 transition-all">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#059669]">Inclusión de Nuevos Públicos</span>
-                    <h3 className="font-serif text-4xl sm:text-5xl font-bold text-[#059669] mt-1">{IMPACT_METRICS.newAudiences}</h3>
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#047857]">Inclusión de Nuevos Públicos</span>
+                    <h3 className="font-serif text-4xl sm:text-5xl font-bold text-[#047857] mt-1">{IMPACT_METRICS.newAudiences}</h3>
                   </div>
                   <div className="max-w-xs">
                     <p className="text-xs sm:text-sm text-[#52525B]">
@@ -193,7 +193,7 @@ export default function Home() {
       {/* 6. FORMULARIO / SUMATE CTA */}
       <Section id="pitch-formulario" bg="surface" className="py-20 md:py-28">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-emerald-100/80 via-[#FDFBF7] to-pink-100/60 p-8 sm:p-12 lg:p-16 border border-emerald-200 shadow-xl" id="alianzas-e-inversion-social">
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-emerald-100/90 via-[#FDFBF7] to-teal-100/60 p-8 sm:p-12 lg:p-16 border border-emerald-200 shadow-xl" id="alianzas-e-inversion-social">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 space-y-6">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white text-[#10B981] text-xs font-extrabold shadow-xs border border-emerald-200">

@@ -14,9 +14,9 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/90 via-[#FDFBF7]/95 to-[#FDFBF7]"></div>
       </div>
 
-      {/* Background Lighting & Glow Spheres Green and Pink */}
+      {/* Background Lighting & Glow Spheres Multi-Tone Green */}
       <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[#A7F3D0]/50 via-[#10B981]/25 to-transparent blur-3xl pointer-events-none -z-10 animate-pulse-slow"></div>
-      <div className="absolute top-96 -left-32 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#FCE7F3]/60 via-[#EC4899]/20 to-transparent blur-3xl pointer-events-none -z-10"></div>
+      <div className="absolute top-96 -left-32 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#6EE7B7]/40 via-[#34D399]/20 to-transparent blur-3xl pointer-events-none -z-10"></div>
 
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -43,7 +43,7 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg text-[#52525B] leading-relaxed max-w-2xl font-normal">
-              Democratizamos el acceso a las artes vivas en Argentina. Un bono solidario impulsado por Natalia y Melina con entradas ilimitadas a recitales, obras de teatro y cine independiente.
+              Democratizamos el acceso a la cultura y el deporte en Argentina. Un modelo solidario impulsado por Natalia y Melina con pase principal a <strong className="font-semibold text-[#10B981]">Conciertos en vivo</strong>, además de Fútbol barrial, Teatros y Cine independiente.
             </p>
 
             {/* Metrics Bar with Glassmorphism */}
@@ -52,13 +52,13 @@ export default function Hero() {
                 <span className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#10B981] font-bold">100%</span>
                 <span className="text-xs sm:text-sm text-[#71717A] mt-1 font-semibold leading-snug">Solidario &amp; Autosustentable</span>
               </div>
-              <div className="p-4 rounded-2xl glass-card shadow-xs flex flex-col hover:border-[#EC4899]/50 transition-all hover:scale-[1.02]">
-                <span className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#EC4899] font-bold">Ilimitado</span>
+              <div className="p-4 rounded-2xl glass-card shadow-xs flex flex-col hover:border-[#34D399]/50 transition-all hover:scale-[1.02]">
+                <span className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#059669] font-bold">Ilimitado</span>
                 <span className="text-xs sm:text-sm text-[#71717A] mt-1 font-semibold leading-snug">Eventos por bono</span>
               </div>
               <div className="p-4 rounded-2xl glass-card shadow-xs flex flex-col hover:border-[#047857]/50 transition-all hover:scale-[1.02]">
-                <span className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#047857] font-bold">+42</span>
-                <span className="text-xs sm:text-sm text-[#71717A] mt-1 font-semibold leading-snug">Salas &amp; Teatros Aliados</span>
+                <span className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#047857] font-bold">+55</span>
+                <span className="text-xs sm:text-sm text-[#71717A] mt-1 font-semibold leading-snug">Salas, Escenarios &amp; Clubes</span>
               </div>
             </div>
 
@@ -66,9 +66,9 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full pt-2">
               <Link
                 to="/bonos"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-[#10B981] via-[#059669] to-[#EC4899] text-white font-bold text-sm sm:text-base gradient-glow hover:gradient-glow-lg hover:-translate-y-1 transition-all text-center"
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-[#047857] via-[#10B981] to-[#34D399] text-white font-bold text-sm sm:text-base gradient-glow hover:gradient-glow-lg hover:-translate-y-1 transition-all text-center"
               >
-                <span>Conocer los 3 Bonos Culturales</span>
+                <span>Conocer los 4 Bonos Culturales</span>
                 <i className="fa-solid fa-arrow-right text-xs"></i>
               </Link>
               <Link
@@ -82,10 +82,10 @@ export default function Hero() {
 
           {/* Right Hero Card - Persona Founders Spotlight */}
           <div className="lg:col-span-5 relative flex justify-center">
-            {/* Interactive Animated Wave Background Green/Pink */}
+            {/* Interactive Animated Wave Background Multi-Tone Green */}
             <div className="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none scale-125 opacity-50">
               <div className="w-72 h-72 rounded-full border border-dashed border-[#10B981] animate-spin" style={{ animationDuration: '30s' }}></div>
-              <div className="w-96 h-96 rounded-full border border-[#EC4899]/30 absolute"></div>
+              <div className="w-96 h-96 rounded-full border border-[#34D399]/40 absolute"></div>
             </div>
 
             {/* Glassmorphism Floating Card with Natalia and Melina */}
@@ -99,7 +99,7 @@ export default function Hero() {
               </div>
 
               {/* Persona Spotlight: Natalia & Melina */}
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-emerald-50/60 to-pink-50/60 border border-emerald-100 shadow-xs">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-emerald-50/80 to-teal-50/50 border border-emerald-100 shadow-xs">
                 <img
                   alt="Natalia y Melina - Dirección General de Contagi.ar"
                   className="w-16 h-16 rounded-full object-cover shadow-md ring-2 ring-[#10B981] shrink-0"
@@ -108,34 +108,39 @@ export default function Hero() {
                 <div>
                   <h4 className="font-bold text-stone-900 text-base leading-tight">Natalia &amp; Melina</h4>
                   <p className="text-xs font-bold text-[#10B981]">Dirección &amp; Coordinación Cultural</p>
-                  <p className="text-xs text-stone-600 italic mt-0.5 leading-snug">“El arte abre puertas que la economía a menudo cierra.”</p>
+                  <p className="text-xs text-stone-600 italic mt-0.5 leading-snug">“El arte y el deporte abren puertas que la economía a menudo cierra.”</p>
                 </div>
               </div>
 
               {/* Capacity Gauge */}
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-xs font-semibold text-stone-600">
-                  <span>Capacidad de salas optimizada</span>
-                  <span className="text-sm font-bold text-[#10B981]">84.6%</span>
+                  <span>Capacidad de salas &amp; estadios optimizada</span>
+                  <span className="text-sm font-bold text-[#10B981]">88.4%</span>
                 </div>
                 <div className="w-full bg-stone-100 h-3 rounded-full overflow-hidden p-0.5 border border-stone-200">
-                  <div className="bg-gradient-to-r from-[#10B981] via-[#059669] to-[#EC4899] h-full rounded-full w-[84.6%] transition-all duration-1000 shadow-sm"></div>
+                  <div className="bg-gradient-to-r from-[#047857] via-[#10B981] to-[#34D399] h-full rounded-full w-[88.4%] transition-all duration-1000 shadow-sm"></div>
                 </div>
               </div>
 
               {/* Category Pills Preview */}
-              <div className="grid grid-cols-3 gap-2.5 text-center">
-                <Link to="/bonos/teatros" className="p-3.5 rounded-2xl bg-white border border-emerald-100 text-xs font-bold text-stone-800 flex flex-col items-center hover:border-[#EC4899] hover:bg-pink-50/30 hover:shadow-md transition-all">
-                  <i className="fa-solid fa-masks-theater text-[#EC4899] text-xl mb-1.5"></i>
-                  Teatros
+              <div className="grid grid-cols-4 gap-2 text-center">
+                <Link to="/bonos/conciertos" className="p-2.5 sm:p-3 rounded-2xl bg-emerald-50 border-2 border-[#10B981] text-xs font-bold text-emerald-950 flex flex-col items-center shadow-sm relative overflow-hidden">
+                  <span className="absolute -top-1 -right-1 bg-[#10B981] text-white text-[9px] px-1.5 py-0.5 rounded-bl font-extrabold">★</span>
+                  <i className="fa-solid fa-headphones-simple text-[#10B981] text-lg mb-1"></i>
+                  <span className="text-[11px]">Conciertos</span>
                 </Link>
-                <Link to="/bonos/conciertos" className="p-3.5 rounded-2xl bg-white border border-emerald-100 text-xs font-bold text-stone-800 flex flex-col items-center hover:border-[#10B981] hover:bg-emerald-50/30 hover:shadow-md transition-all">
-                  <i className="fa-solid fa-music text-[#10B981] text-xl mb-1.5"></i>
-                  Conciertos
+                <Link to="/bonos/futbol" className="p-2.5 sm:p-3 rounded-2xl bg-white border border-emerald-100 text-xs font-bold text-stone-800 flex flex-col items-center hover:border-[#059669] hover:bg-emerald-50/50 hover:shadow-md transition-all">
+                  <i className="fa-solid fa-futbol text-[#059669] text-lg mb-1"></i>
+                  <span className="text-[11px]">Fútbol</span>
                 </Link>
-                <Link to="/bonos/cine" className="p-3.5 rounded-2xl bg-white border border-emerald-100 text-xs font-bold text-stone-800 flex flex-col items-center hover:border-[#059669] hover:bg-emerald-50/30 hover:shadow-md transition-all">
-                  <i className="fa-solid fa-film text-[#059669] text-xl mb-1.5"></i>
-                  Cine
+                <Link to="/bonos/teatros" className="p-2.5 sm:p-3 rounded-2xl bg-white border border-emerald-100 text-xs font-bold text-stone-800 flex flex-col items-center hover:border-[#047857] hover:bg-emerald-50/30 hover:shadow-md transition-all">
+                  <i className="fa-solid fa-masks-theater text-[#047857] text-lg mb-1"></i>
+                  <span className="text-[11px]">Teatros</span>
+                </Link>
+                <Link to="/bonos/cine" className="p-2.5 sm:p-3 rounded-2xl bg-white border border-emerald-100 text-xs font-bold text-stone-800 flex flex-col items-center hover:border-[#34D399] hover:bg-emerald-50/30 hover:shadow-md transition-all">
+                  <i className="fa-solid fa-film text-[#10B981] text-lg mb-1"></i>
+                  <span className="text-[11px]">Cine</span>
                 </Link>
               </div>
             </div>

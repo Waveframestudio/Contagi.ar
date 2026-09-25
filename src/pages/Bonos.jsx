@@ -9,20 +9,20 @@ export default function Bonos() {
     <div className="py-12 space-y-16">
       {/* Header Banner */}
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-        <span className="text-xs uppercase tracking-widest text-[#EB5E3A] font-bold">
-          Membresías Culturales Solidarias
+        <span className="text-xs uppercase tracking-widest text-[#10B981] font-bold">
+          Membresías Culturales &amp; Deportivas Solidarias
         </span>
         <h1 className="font-serif text-4xl sm:text-5xl font-semibold text-[#18181B]">
-          Nuestros Bonos Culturales
+          Nuestros Bonos Solidarios
         </h1>
         <p className="text-base sm:text-lg text-[#52525B] max-w-2xl mx-auto leading-relaxed">
-          Cada bono habilita acceso ilimitado a espectáculos y salas seleccionadas dentro de su categoría, además de destinar directamente recursos al sostenimiento de salas independientes.
+          Cada bono habilita acceso ilimitado a espectáculos y eventos seleccionados dentro de su categoría (con <strong className="text-[#10B981]">Bono Conciertos</strong> como modalidad principal), destinando directamente recursos al sostenimiento de salas y clubes barriales.
         </p>
       </div>
 
       {/* Cards List */}
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {BONOS_DATA.map((bono) => (
             <CardBono key={bono.id} bono={bono} />
           ))}
@@ -37,25 +37,25 @@ export default function Bonos() {
               ¿Por qué el pase es ilimitado?
             </h2>
             <p className="text-sm text-[#52525B]">
-              Gracias a nuestro algoritmo de Butacas Vacías, optimizamos la capacidad ociosa de salas y teatros sin costos marginales adicionales.
+              Gracias a nuestro algoritmo de Butacas Vacías, optimizamos la capacidad ociosa de salas, teatros y estadios sin costos marginales adicionales.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-white rounded-2xl border border-[#EADDD3] space-y-2">
-              <i className="fa-solid fa-infinity text-[#EB5E3A] text-2xl"></i>
+            <div className="p-6 bg-white rounded-2xl border border-emerald-100 space-y-2 shadow-xs">
+              <i className="fa-solid fa-infinity text-[#10B981] text-2xl"></i>
               <h3 className="font-bold text-stone-900">Sin límite de reservas</h3>
-              <p className="text-xs text-stone-600">Disfrutá de cuantas obras, recitales o películas desees dentro del mes de vigencia.</p>
+              <p className="text-xs text-stone-600">Disfrutá de cuantos recitales, partidos, obras o películas desees dentro del mes de vigencia.</p>
             </div>
-            <div className="p-6 bg-white rounded-2xl border border-[#EADDD3] space-y-2">
-              <i className="fa-solid fa-[#C05400] fa-qrcode text-[#C05400] text-2xl"></i>
+            <div className="p-6 bg-white rounded-2xl border border-emerald-100 space-y-2 shadow-xs">
+              <i className="fa-solid fa-qrcode text-[#059669] text-2xl"></i>
               <h3 className="font-bold text-stone-900">Pase Digital QR</h3>
               <p className="text-xs text-stone-600">Presentá tu credencial directamente en el teléfono sin trámites ni impresiones.</p>
             </div>
-            <div className="p-6 bg-white rounded-2xl border border-[#EADDD3] space-y-2">
-              <i className="fa-solid fa-hand-holding-heart text-[#6F5670] text-2xl"></i>
+            <div className="p-6 bg-white rounded-2xl border border-emerald-100 space-y-2 shadow-xs">
+              <i className="fa-solid fa-hand-holding-heart text-[#047857] text-2xl"></i>
               <h3 className="font-bold text-stone-900">Fondo Solidario</h3>
-              <p className="text-xs text-stone-600">El 40% de tu aporte fortalece la infraestructura de salas independientes y becas comunitarias.</p>
+              <p className="text-xs text-stone-600">El 40% de tu aporte fortalece la infraestructura de salas independientes, clubes de barrio y becas comunitarias.</p>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function Bonos() {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         <CTA
           title="¿No sabés cuál elegir?"
-          subtitle="Consultá por nuestro Combo Integral Trilogía para acceder a Conciertos, Teatros y Cine simultáneamente."
+          subtitle="Consultá por nuestro Combo Cuatrilogía para acceder a Conciertos, Fútbol, Teatros y Cine simultáneamente."
           buttonText="Sumate o Consultá"
           buttonLink="/sumate"
         />

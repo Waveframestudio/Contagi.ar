@@ -2,7 +2,7 @@ export const SITE_BRAND = {
   name: "Contagi.ar",
   tagline: "El cambio positivo se contagia. La cultura se multiplica.",
   description: "Democratizamos el acceso a las artes vivas en Argentina mediante un modelo solidario de bonos culturales con entradas ilimitadas a conciertos, teatros y cines independientes.",
-  logoUrl: "/contagiar_logo.png",
+  logoUrl: "/contagiar_logo_icon.png",
   registration: "ONG Cultural Registrada N° 48921"
 };
 
@@ -11,17 +11,17 @@ export const BONOS_DATA = [
     id: "conciertos",
     slug: "conciertos",
     title: "Bono Conciertos",
-    subtitle: "Vibración en vivo, música clásica, rock, indie y festivales.",
+    subtitle: "Vibración en vivo, música clásica, rock, indie, jazz y festivales.",
     description: "Pase solidario con acceso ilimitado a recitales y ciclos musicales aliados durante el período de vigencia sin cupos restrictivos.",
     icon: "fa-headphones-simple",
-    categoryBadge: "Ciclos & En Vivo",
+    categoryBadge: "Modalidad Insignia Principal",
     accentColor: "#10B981",
     bgColor: "#D1FAE5",
-    tags: ["Acceso Ilimitado", "Salas Independientes & Teatros", "Pase Transferible Familiar"],
+    tags: ["Acceso Ilimitado", "Salas Independientes & Estadios", "Pase Transferible Familiar"],
     impactNote: "Cada bono financia 2 becas para talleres de iniciación musical comunitaria.",
     impactIcon: "fa-hand-holding-heart",
-    featured: false,
-    extendedDescription: "El Bono Conciertos te abre la puerta al circuito musical vibrante de tu ciudad. Desde salas íntimas de jazz e indie hasta grandes auditorios de música clásica y festivales emergentes. Diseñado para que la música en vivo sea parte de tu rutina semanal.",
+    featured: true,
+    extendedDescription: "Nuestra modalidad insignia. El Bono Conciertos te abre la puerta al circuito musical vibrante de tu ciudad. Desde salas íntimas de jazz e indie hasta grandes auditorios de música clásica y festivales emergentes. Diseñado para que la música en vivo sea el motor de tu rutina semanal.",
     benefits: [
       "Ingreso a más de 30 salas y escenarios en convenio.",
       "Reserva prioritaria 48hs antes para fechas de alta demanda.",
@@ -39,20 +39,51 @@ export const BONOS_DATA = [
     ]
   },
   {
+    id: "futbol",
+    slug: "futbol",
+    title: "Bono Fútbol",
+    subtitle: "Pasión barrial, torneos del ascenso, fútbol femenino y estadios de tradición.",
+    description: "Pase comunitario con acceso libre a partidos de liga local, torneos regionales y encuentros en clubes sociales y deportivos.",
+    icon: "fa-futbol",
+    categoryBadge: "Cultura Popular & Deporte",
+    accentColor: "#059669",
+    bgColor: "#ECFDF5",
+    tags: ["Acceso Ilimitado", "Clubes de Barrio & Ascenso", "Tribuna Familiar Inclusiva"],
+    impactNote: "Sostiene escuelitas de fútbol inclusivo y restauración de canchas comunitarias.",
+    impactIcon: "fa-trophy",
+    featured: false,
+    extendedDescription: "El fútbol como manifestación cultural y comunitaria fundamental. El Bono Fútbol abre las puertas de los estadios tradicionales, los partidos del ascenso y el fútbol femenino para volver a habitar la tribuna en familia.",
+    benefits: [
+      "Ingreso directo a partidos de local y neutrales en clubes adheridos.",
+      "Acceso a sectores de tribuna social y plateas comunitarias.",
+      "Participación en clínicas deportivas y encuentros con glorias del club.",
+      "Pase 100% digital con QR único de acreditación rápida."
+    ],
+    sampleEvents: [
+      { name: "Liga Federal de Ascenso (Fecha 12)", venue: "Estadio Defensores del Barrio", date: "Sábado 15:30 hs" },
+      { name: "Torneo Oficial Fútbol Femenino", venue: "Cancha Central San Martín", date: "Domingo 11:00 hs" },
+      { name: "Clásico Comunitario de la Ciudad", venue: "Polideportivo Municipal", date: "Viernes 19:00 hs" }
+    ],
+    faqs: [
+      { q: "¿Cubre partidos de primera división nacional?", a: "Incluye producciones y convenios especiales en sectores comunitarios designados de primera y ascenso." },
+      { q: "¿Puedo ir con niños?", a: "Sí, los bonos contemplan pases familiares para promover la asistencia intergeneracional." }
+    ]
+  },
+  {
     id: "teatros",
     slug: "teatros",
     title: "Bono Teatros",
     subtitle: "Dramaturgia contemporánea, circuito alternativo y salas emblemáticas.",
     description: "Entrada ilimitada a obras, unipersonales y performances escénicas sin cupos ocultos, con preservación de butacas de honor solidario.",
     icon: "fa-masks-theater",
-    categoryBadge: "Más Demandado en Circuitos",
-    accentColor: "#EC4899",
-    bgColor: "#FCE7F3",
+    categoryBadge: "Circuito Escénico & Dramaturgia",
+    accentColor: "#047857",
+    bgColor: "#D1FAE5",
     tags: ["Acceso Ilimitado", "Butacas preferenciales solidarias", "Encuentros post-función"],
     impactNote: "Apoyo directo y fondo de contingencia a 26 salas teatrales barriales autogestionadas.",
     impactIcon: "fa-sparkles",
-    featured: true,
-    extendedDescription: "Nuestra modalidad insignia. El Bono Teatros conecta la pasión de los espectadores con la sostenibilidad de los teatros independientes. Descubrí dramaturgia viva, comedia, drama y teatro físico en espacios con mística única.",
+    featured: false,
+    extendedDescription: "El Bono Teatros conecta la pasión de los espectadores con la sostenibilidad de los teatros independientes. Descubrí dramaturgia viva, comedia, drama y teatro físico en espacios con mística única.",
     benefits: [
       "Acceso ilimitado a más de 26 salas de la Red Federal.",
       "Reservas directas con 1 clic desde tu smartphone.",
@@ -77,8 +108,8 @@ export const BONOS_DATA = [
     description: "Pantallas independientes, cineclubes históricos y retrospectivas con butaca libre todo el mes para fortalecer la memoria audiovisual.",
     icon: "fa-film",
     categoryBadge: "Autor & Festivales",
-    accentColor: "#059669",
-    bgColor: "#D1FAE5",
+    accentColor: "#10B981",
+    bgColor: "#ECFDF5",
     tags: ["Acceso Ilimitado", "Cine debate con realizadores", "Acceso a plataforma digital"],
     impactNote: "Fomento de producciones federales y rescate de archivo cinematográfico.",
     impactIcon: "fa-video",
@@ -118,17 +149,17 @@ export const TESIS_PILARS = [
     title: "Acceso Ilimitado & Justo",
     desc: "Eliminamos el cálculo transaccional del ticket individual. Con una membresía solidaria de bajo costo, la persona asiste cuantas veces quiera, revalorizando cada butaca vacía.",
     tag: "Cero Barreras Económicas",
-    tagColor: "#EC4899",
+    tagColor: "#059669",
     icon: "fa-infinity",
-    iconBg: "#FCE7F3",
-    iconColor: "#EC4899"
+    iconBg: "#ECFDF5",
+    iconColor: "#065F46"
   },
   {
     num: "3",
     title: "Ecosistema Sostenible",
     desc: "Financiamiento ético y transparente. El fondo mutual de bonos redistribuye ingresos predecibles para la programación de salas independientes y proyectos de artistas emergentes.",
     tag: "Previsibilidad para Artistas",
-    tagColor: "#059669",
+    tagColor: "#047857",
     icon: "fa-scale-balanced",
     iconBg: "#D1FAE5",
     iconColor: "#047857"

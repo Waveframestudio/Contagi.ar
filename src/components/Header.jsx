@@ -18,13 +18,16 @@ export default function Header() {
   return (
     <header className="sticky top-0 left-0 w-full z-50 bg-[#FDFBF7]/85 backdrop-blur-xl border-b border-emerald-900/10 transition-all duration-300">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-        {/* Logo con Marca Oficial Contagi.ar Verde y Rosa */}
+        {/* Logo Isotipo + Tipografía Oficial Contagi.ar */}
         <Link to="/" className="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95">
           <img
             alt={SITE_BRAND.name}
-            className="h-10 md:h-12 w-auto object-contain filter drop-shadow-sm"
+            className="h-10 md:h-11 w-10 md:w-11 object-contain filter drop-shadow-sm"
             src={SITE_BRAND.logoUrl}
           />
+          <span className="font-serif font-bold text-2xl tracking-tight text-[#18181B]">
+            Contagi<span className="gradient-text-brand">.ar</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -60,7 +63,7 @@ export default function Header() {
           </Link>
           <Link
             to="/sumate"
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-gradient-to-r from-[#10B981] via-[#059669] to-[#EC4899] hover:opacity-95 text-white text-xs md:text-sm font-bold gradient-glow transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-gradient-to-r from-[#047857] via-[#10B981] to-[#34D399] hover:opacity-95 text-white text-xs md:text-sm font-bold gradient-glow transition-all hover:-translate-y-0.5"
           >
             <span>Sumate</span>
             <i className="fa-solid fa-arrow-right text-xs ml-2"></i>
