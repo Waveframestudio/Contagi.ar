@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="public/contagiar_master_logo.png" alt="Contagi.ar Logo" width="220" />
-
-# Contagi.ar · ONG Cultural
+<h1>
+  <img src="public/contagiar_logo_icon.png" alt="Contagi.ar Logo" width="42" height="42" valign="middle" style="vertical-align: middle; display: inline-block; margin-right: 8px;" /> Contagi.ar · ONG Cultural
+</h1>
 
 > **"El cambio positivo se contagia. La cultura se multiplica."**
 
