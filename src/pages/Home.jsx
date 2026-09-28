@@ -4,6 +4,10 @@ import Section from '../components/Section';
 import CardBono from '../components/CardBono';
 import Feature from '../components/Feature';
 import Testimonial from '../components/Testimonial';
+import ScrollReveal from '../components/common/ScrollReveal';
+import CounterTrigger from '../components/common/CounterTrigger';
+import TiltCard from '../components/common/TiltCard';
+import ParallaxBox from '../components/common/ParallaxBox';
 import { BONOS_DATA, TESIS_PILARS, STEPS_DATA, IMPACT_METRICS } from '../data/content';
 
 export default function Home() {
@@ -20,9 +24,11 @@ export default function Home() {
       <Hero />
 
       {/* 2. NUESTRA TESIS SOCIAL */}
-      <Section id="que-es-contagiar" bg="surface" className="py-20 md:py-28">
+      <Section id="que-es-contagiar" bg="surface" className="py-20 md:py-28 relative overflow-hidden">
+        <ParallaxBox speed={0.15} className="absolute top-10 right-10 w-96 h-96 bg-emerald-100/30 rounded-full blur-3xl pointer-events-none -z-10" />
+        
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
-          <div className="max-w-3xl space-y-4">
+          <ScrollReveal animation="fade-up" className="max-w-3xl space-y-4">
             <span className="text-xs uppercase tracking-widest text-[#10B981] font-extrabold bg-emerald-100/70 px-3.5 py-1 rounded-full border border-emerald-300">
               Nuestra Tesis Social
             </span>
@@ -32,29 +38,30 @@ export default function Home() {
             <p className="text-base sm:text-lg text-[#52525B] leading-relaxed pt-1">
               Cuando una persona accede al arte, su entusiasmo e impacto conmueven a su entorno familiar, laboral y barrial. Rechazamos el modelo de boletería excluyente: creamos un ecosistema de participación continua que sostiene a las salas y despierta a la ciudadanía.
             </p>
-          </div>
+          </ScrollReveal>
 
-          {/* 3 Pilares */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {/* 3 Pilares con GSAP Stagger Reveal */}
+          <ScrollReveal animation="stagger" stagger={0.15} className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {TESIS_PILARS.map((pilar) => (
-              <Feature
-                key={pilar.num}
-                title={`${pilar.num}. ${pilar.title}`}
-                description={pilar.desc}
-                tag={pilar.tag}
-                tagColor={pilar.tagColor}
-                icon={pilar.icon}
-                iconBg={pilar.iconBg}
-                iconColor={pilar.iconColor}
-              />
+              <TiltCard key={pilar.num} className="h-full">
+                <Feature
+                  title={`${pilar.num}. ${pilar.title}`}
+                  description={pilar.desc}
+                  tag={pilar.tag}
+                  tagColor={pilar.tagColor}
+                  icon={pilar.icon}
+                  iconBg={pilar.iconBg}
+                  iconColor={pilar.iconColor}
+                />
+              </TiltCard>
             ))}
-          </div>
+          </ScrollReveal>
         </div>
       </Section>
 
       {/* 3. MODALIDADES DE BONOS CULTURALES */}
       <Section id="bonos-culturales" className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 space-y-14">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
+        <ScrollReveal animation="fade-up" className="text-center max-w-2xl mx-auto space-y-3">
           <span className="text-xs uppercase tracking-widest text-[#10B981] font-extrabold bg-emerald-100/70 px-3.5 py-1 rounded-full border border-emerald-300">
             Membresías Solidarias
           </span>
@@ -64,19 +71,21 @@ export default function Home() {
           <p className="text-sm sm:text-base text-[#52525B]">
             Diseñadas para democratizar el acceso a espectáculos en vivo, deporte popular, teatro independiente y cine de autor.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <ScrollReveal animation="stagger" stagger={0.12} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {BONOS_DATA.map((bono) => (
-            <CardBono key={bono.id} bono={bono} />
+            <TiltCard key={bono.id} className="h-full">
+              <CardBono bono={bono} />
+            </TiltCard>
           ))}
-        </div>
+        </ScrollReveal>
       </Section>
 
       {/* 4. CÓMO FUNCIONA EL MODELO (Flujo de 4 pasos) */}
-      <Section id="como-funciona" bg="surface" className="py-20 md:py-28">
+      <Section id="como-funciona" bg="surface" className="py-20 md:py-28 relative">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
-          <div className="text-center max-w-2xl mx-auto space-y-3">
+          <ScrollReveal animation="fade-up" className="text-center max-w-2xl mx-auto space-y-3">
             <span className="text-xs uppercase tracking-widest text-[#10B981] font-extrabold bg-emerald-100/70 px-3.5 py-1 rounded-full border border-emerald-300">
               Proceso Transparente
             </span>
@@ -86,9 +95,9 @@ export default function Home() {
             <p className="text-sm sm:text-base text-[#52525B]">
               Simple, digital e inmediato tanto para el público usuario como para la rendición institucional.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <ScrollReveal animation="stagger" stagger={0.15} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {STEPS_DATA.map((stepItem, idx) => (
               <div
                 key={stepItem.step}
@@ -108,7 +117,7 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </ScrollReveal>
         </div>
       </Section>
 
@@ -116,7 +125,7 @@ export default function Home() {
       <Section id="impacto-social" className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="space-y-14">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-5 space-y-6">
+            <ScrollReveal animation="fade-right" className="lg:col-span-5 space-y-6">
               <span className="text-xs uppercase tracking-widest text-[#10B981] font-extrabold bg-emerald-100/70 px-3.5 py-1 rounded-full border border-emerald-300">
                 Métricas de Retorno Social
               </span>
@@ -131,14 +140,16 @@ export default function Home() {
                 author={IMPACT_METRICS.testimonial.author}
                 role={IMPACT_METRICS.testimonial.role}
               />
-            </div>
+            </ScrollReveal>
 
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <ScrollReveal animation="stagger" stagger={0.15} className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="p-7 rounded-3xl bg-white border border-[#E6DAD0] shadow-sm space-y-4 hover:border-[#10B981]/50 transition-all">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-[#10B981]">SROI Estimado</span>
                   <div className="flex items-baseline gap-2 mt-1">
-                    <span className="font-serif text-4xl font-bold text-[#10B981]">{IMPACT_METRICS.sroi}</span>
+                    <span className="font-serif text-4xl font-bold text-[#10B981]">
+                      4:1
+                    </span>
                     <span className="text-xs text-[#71717A]">por cada $1 invertido</span>
                   </div>
                 </div>
@@ -152,7 +163,9 @@ export default function Home() {
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-[#059669]">Ocupación de Butacas</span>
                   <div className="flex items-baseline gap-2 mt-1">
-                    <span className="font-serif text-4xl font-bold text-[#059669]">{IMPACT_METRICS.occupancy}</span>
+                    <span className="font-serif text-4xl font-bold text-[#059669]">
+                      <CounterTrigger end={88.4} suffix="%" decimals={1} />
+                    </span>
                     <span className="text-xs text-[#71717A]">promedio mensual</span>
                   </div>
                 </div>
@@ -166,7 +179,9 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
                     <span className="text-xs font-bold uppercase tracking-wider text-[#047857]">Inclusión de Nuevos Públicos</span>
-                    <h3 className="font-serif text-4xl sm:text-5xl font-bold text-[#047857] mt-1">{IMPACT_METRICS.newAudiences}</h3>
+                    <h3 className="font-serif text-4xl sm:text-5xl font-bold text-[#047857] mt-1">
+                      <CounterTrigger end={68} suffix="%" />
+                    </h3>
                   </div>
                   <div className="max-w-xs">
                     <p className="text-xs sm:text-sm text-[#52525B]">
@@ -185,7 +200,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </Section>
@@ -193,7 +208,7 @@ export default function Home() {
       {/* 6. FORMULARIO / SUMATE CTA */}
       <Section id="pitch-formulario" bg="surface" className="py-20 md:py-28">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-emerald-100/90 via-[#FDFBF7] to-teal-100/60 p-8 sm:p-12 lg:p-16 border border-emerald-200 shadow-xl" id="alianzas-e-inversion-social">
+          <ScrollReveal animation="zoom-in" className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-emerald-100/90 via-[#FDFBF7] to-teal-100/60 p-8 sm:p-12 lg:p-16 border border-emerald-200 shadow-xl" id="alianzas-e-inversion-social">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-6 space-y-6">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white text-[#10B981] text-xs font-extrabold shadow-xs border border-emerald-200">
@@ -261,7 +276,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </Section>
     </>
