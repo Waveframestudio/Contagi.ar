@@ -6,6 +6,7 @@ import Feature from '../components/Feature';
 import Testimonial from '../components/Testimonial';
 import ScrollReveal from '../components/common/ScrollReveal';
 import CounterTrigger from '../components/common/CounterTrigger';
+import ProgressBarTrigger from '../components/common/ProgressBarTrigger';
 import TiltCard from '../components/common/TiltCard';
 import ParallaxBox from '../components/common/ParallaxBox';
 import { BONOS_DATA, TESIS_PILARS, STEPS_DATA, IMPACT_METRICS } from '../data/content';
@@ -154,9 +155,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-xs text-[#52525B] leading-relaxed">{IMPACT_METRICS.sroiDesc}</p>
-                <div className="w-full bg-emerald-100 h-2 rounded-full overflow-hidden">
-                  <div className="bg-[#10B981] h-full rounded-full w-3/4"></div>
-                </div>
+                <ProgressBarTrigger targetWidth={75} duration={1.5} containerClassName="w-full bg-emerald-100 h-2 rounded-full overflow-hidden" className="bg-[#10B981] h-full rounded-full" />
               </div>
 
               <div className="p-7 rounded-3xl bg-white border border-[#E6DAD0] shadow-sm space-y-4 hover:border-[#059669]/50 transition-all">
@@ -170,9 +169,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-xs text-[#52525B] leading-relaxed">{IMPACT_METRICS.occupancyDesc}</p>
-                <div className="w-full bg-emerald-100 h-2 rounded-full overflow-hidden">
-                  <div className="bg-[#059669] h-full rounded-full w-4/5"></div>
-                </div>
+                <ProgressBarTrigger targetWidth={88.4} duration={1.6} containerClassName="w-full bg-emerald-100 h-2 rounded-full overflow-hidden" className="bg-[#059669] h-full rounded-full" />
               </div>
 
               <div className="sm:col-span-2 p-7 rounded-3xl bg-white border border-[#E6DAD0] shadow-sm space-y-4 hover:border-[#047857]/50 transition-all">
@@ -194,10 +191,7 @@ export default function Home() {
                     <span>Públicos Novedosos (68%)</span>
                     <span>Públicos Frecuentes (32%)</span>
                   </div>
-                  <div className="w-full flex h-3.5 rounded-full overflow-hidden p-0.5 bg-stone-100 border border-stone-200">
-                    <div className="bg-[#10B981] w-[68%] h-full rounded-l-full"></div>
-                    <div className="bg-emerald-100 w-[32%] h-full rounded-r-full"></div>
-                  </div>
+                  <ProgressBarTrigger targetWidth={68} duration={1.6} containerClassName="w-full flex h-3.5 rounded-full overflow-hidden p-0.5 bg-stone-100 border border-stone-200" className="bg-[#10B981] h-full rounded-l-full" />
                 </div>
               </div>
             </ScrollReveal>

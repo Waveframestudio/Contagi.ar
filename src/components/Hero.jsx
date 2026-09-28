@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from '../utils/gsapSetup';
 import CounterTrigger from './common/CounterTrigger';
+import ProgressBarTrigger from './common/ProgressBarTrigger';
 import ParallaxBox from './common/ParallaxBox';
 import TiltCard from './common/TiltCard';
 
@@ -185,17 +186,15 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Capacity Gauge */}
+              {/* Capacity Gauge with Animated Fill & Animated Counter */}
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-xs font-semibold text-stone-600">
                   <span>Capacidad de salas &amp; estadios optimizada</span>
                   <span className="text-sm font-bold text-[#10B981]">
-                    <CounterTrigger end={88.4} suffix="%" decimals={1} />
+                    <CounterTrigger end={88.4} suffix="%" decimals={1} duration={2} />
                   </span>
                 </div>
-                <div className="w-full bg-stone-100 h-3 rounded-full overflow-hidden p-0.5 border border-stone-200">
-                  <div className="bg-gradient-to-r from-[#047857] via-[#10B981] to-[#34D399] h-full rounded-full w-[88.4%] transition-all duration-1000 shadow-sm"></div>
-                </div>
+                <ProgressBarTrigger targetWidth={88.4} duration={1.8} delay={0.4} />
               </div>
 
               {/* Category Pills Preview */}
