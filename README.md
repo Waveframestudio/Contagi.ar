@@ -54,3 +54,107 @@ La plataforma está diseñada bajo un sistema visual de alta fidelidad orientada
 
 - **100% Solidario & Reutilizable**: El 40% de los aportes se destina directamente al fondo de infraestructura barrial y becas culturales.
 - **Transparencia & Trazabilidad**: Reportes periódicos para organizaciones filantrópicas, inversores sociales y convenios de mecenazgo impositivo.
+
+---
+
+### 📸 Galería de la Plataforma
+
+<table align="center" width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_5.png" alt="Hero Principal e Inicio" width="100%" />
+      <br />
+      <em><b>Inicio · Hero y Propuesta de Valor</b></em>
+    </td>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_6.png" alt="Tesis Social y Pilares" width="100%" />
+      <br />
+      <em><b>Tesis Social · Pilares Comunitarios</b></em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_7.png" alt="Modalidades de Bonos Culturales" width="100%" />
+      <br />
+      <em><b>Catálogo · Modalidades de Bonos Culturales</b></em>
+    </td>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_8.png" alt="Cómo Funciona el Modelo" width="100%" />
+      <br />
+      <em><b>Funcionamiento · Proceso Transparente</b></em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_9.png" alt="Métricas e Impacto Social (SROI)" width="100%" />
+      <br />
+      <em><b>Métricas · Retorno Social de la Inversión (SROI)</b></em>
+    </td>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_10.png" alt="Convocatoria y Alianzas" width="100%" />
+      <br />
+      <em><b>Alianzas · Convocatoria y Footer Institucional</b></em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_11.png" alt="Pase Ilimitado y Preguntas Clave" width="100%" />
+      <br />
+      <em><b>Beneficios · Pase Digital QR y Membresías</b></em>
+    </td>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_12.png" alt="Ecosistema Contagi.ar" width="100%" />
+      <br />
+      <em><b>Transparencia · Ecosistema Integral</b></em>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_13.png" alt="Impacto Social y Testimonios" width="100%" />
+      <br />
+      <em><b>Comunidad · Testimonios y Validación de Red</b></em>
+    </td>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_14.png" alt="Formulario de Adhesión y Contacto" width="100%" />
+      <br />
+      <em><b>Contacto · Formulario de Adhesión y Canales Directos</b></em>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🚀 Instalación y Puesta en Marcha
+
+Sigue estos pasos para clonar y ejecutar el proyecto localmente en tu entorno de desarrollo:
+
+#### Prerrequisitos
+- [Node.js](https://nodejs.org/) (versión 18 o superior recomendada)
+- Gestor de paquetes: `npm`, `pnpm` o `yarn`
+
+#### 1. Clonar el repositorio
+```bash
+git clone https://github.com/tu-usuario/contagi.ar.git
+cd contagi.ar
+```
+
+#### 2. Instalar dependencias
+```bash
+npm install
+```
+
+#### 3. Iniciar el servidor de desarrollo
+```bash
+npm run dev
+```
+La aplicación estará disponible en `http://localhost:5173` (o el puerto indicado en la consola).
+
+#### 🛠️ Scripts Disponibles
+
+| Comando | Descripción |
+| :--- | :--- |
+| `npm run dev` | Inicia el entorno de desarrollo local con Vite (HMR activado). |
+| `npm run build` | Compila y optimiza el código fuente para producción en `/dist`. |
+| `npm run preview` | Previsualiza localmente el build de producción. |
+| `npm run lint` | Analiza el código con `oxlint` para garantizar calidad y consistencia. |
+
